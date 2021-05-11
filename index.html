@@ -20,30 +20,46 @@
 </div>
  </header>
 
- <main>
-<button class="btn-img btn-paper">
+ <main id="main">
+<button class="btn-img btn-paper pick" data-choice="paper">
     <span class="wraper">
     <img src="img\icon-paper (1).svg"></span></button>
 
 
-<button class="btn-img btn-scissor">
+<button class="btn-img btn-scissor pick" data-choice="scissor">
     <span class="wraper">
     <img src="img\icon-scissors (1).svg"></span></button>
 
 
-<button class="btn-img btn-rock">
+<button class="btn-img btn-rock pick" data-choice="rock">
     <span class="wraper">
     <img src="img\icon-rock.svg"></span></button>
 
  </main>
-<button class="btn-rules">Rules</button>
 
-
+ <button class="btn-rules">Rules</button>
 </div>
 
 
+ <div class="selection" id="selection">
+ <div>
+     <h2>you picked</h2>
+     <button class="btn-img btn-paper " id="userSelect">
+        <span class="wraper">
+        <img src="img\icon-paper (1).svg"></span></button>
+ </div>
+ <div>
+     <p class="big-text">you<span id="winner">win</span></p>
+     <button class="btn" id="reset">Play again</button>
+ </div>
+ <div>
+     <h2>computer picked</h2>
+     <button class="btn-img btn-rock" id="computerSelect" >
+        <span class="wraper">
+        <img src="img\icon-rock.svg"></span></button>
+ </div>
+ </div>
 
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
