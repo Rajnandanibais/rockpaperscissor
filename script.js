@@ -11,6 +11,11 @@ const computerSelect=document.getElementById('computerSelect');
 const userImg=document.querySelector('.user-img');
 const computerImg=document.querySelector('.computer-img');
 const winner=document.getElementById('winner');
+//rule modal
+const openbtn=document.getElementById('open');
+const closebtn=document.getElementById('close');
+const modal=document.getElementById('modal');
+
 
 //console.log(pickRandomChoice());
 let score=0;
@@ -36,6 +41,13 @@ selection.style.display='none';
 
 })
 
+openbtn.addEventListener('click',()=>{
+modal.style.display='flex';
+});
+
+closebtn.addEventListener('click',()=>{
+modal.style.display='none';
+});
 
 function checkWinner() {
 let computerchoice=pickRandomChoice();
@@ -87,6 +99,6 @@ computerSelect.classList.remove("btn-scissor");
 userSelect.classList.add(`btn-${userchoice}`);
 computerSelect.classList.add(`btn-${computerchoice}`);
 
-userImg.src=` img\icon-${userchoice}.svg`;
-computerImg.src=`img\icon-${computerchoice}.svg`;
+userImg.src=` img/icon-${userchoice}.svg`;
+computerImg.src=`img/icon-${computerchoice}.svg`;
 }

@@ -105,7 +105,7 @@ z-index: -1;
     height: 120px;
     width:120px;
 }
-.btn-img:focus{
+button:focus{
     outline:none;
 }
 .btn-img:active{
@@ -159,4 +159,23 @@ background: linear-gradient(to bottom , hsl(349, 71%, 52%) , hsl(349, 70%, 56%))
     margin:0 0 20px;
     line-height: 0.8;
     text-transform: uppercase;
+}
+
+.rules-modal{
+    background: #f0f0f0;
+    display:none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top:0;
+    bottom:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+}
+.rules-modal button{
+    border: none;
+    background-color: transparent;
+    margin-top: 100px;
+    transform: scale(1.5);
 }
