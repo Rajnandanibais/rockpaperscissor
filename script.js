@@ -1,6 +1,6 @@
 'use strict';
 
-const choices=['paper','scissor','rock'];
+const choices=['paper','scissors','rock'];
 const button=document.querySelectorAll('.pick');
 const scoreEl=document.getElementById('score');
 const main=document.getElementById('main');
@@ -50,7 +50,7 @@ modal.style.display='none';
 });
 
 function checkWinner() {
-let computerchoice=pickRandomChoice();
+ computerchoice=pickRandomChoice();
 
 
 //updateSelection(userSelect,userchoice);
@@ -60,8 +60,8 @@ if(userchoice===computerchoice){
     winner.innerText='draw';
     
 }else if((userchoice==='paper' && computerchoice==='rock') ||
-(userchoice==='rock'&&computerchoice==='scissor') ||
-(userchoice==='scissoe'&&computerchoice==='paper')){
+(userchoice==='rock'&&computerchoice==='scissors') ||
+(userchoice==='scissors'&&computerchoice==='paper')){
     //userwin
     updateScore(1);
     winner.innerText='win';
@@ -83,7 +83,7 @@ function updateScore(value){
 }
 
 function pickRandomChoice() {
-    const choices=['paper','rock','scissor'];
+    const choices=['paper','rock','scissors'];
     return choices[Math.trunc(Math.random()*choices.length)]
     ;
 }
@@ -91,14 +91,18 @@ function pickRandomChoice() {
 function updateSelection(){
 userSelect.classList.remove("btn-paper");
 userSelect.classList.remove("btn-rock");
-userSelect.classList.remove("btn-scissor");
+userSelect.classList.remove("btn-scissors");
 computerSelect.classList.remove("btn-paper");
 computerSelect.classList.remove("btn-rock");
-computerSelect.classList.remove("btn-scissor");
+computerSelect.classList.remove("btn-scissors");
 
 userSelect.classList.add(`btn-${userchoice}`);
 computerSelect.classList.add(`btn-${computerchoice}`);
 
-userImg.src=` img/icon-${userchoice}.svg`;
-computerImg.src=`img/icon-${computerchoice}.svg`;
+//userImg.src=`img\icon-${userchoice}.svg`;
+//computerImg.src=`img\icon-${computerchoice}.svg`;
+
+userImg.src = ` image\icon-${userchoice}.svg`;
+computerImg.src = `image\icon-${computerchoice}.svg`;
+
 }
