@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 
 const choices = ['paper', 'scissors', 'rock'];
 const button = document.querySelectorAll('.pick');
@@ -83,17 +83,6 @@ function pickRandomChoice() {
     ;
 }
 
-/*function updateSelection(){
-userSelect.classList.remove("btn-paper");
-userSelect.classList.remove("btn-rock");
-userSelect.classList.remove("btn-scissors");
-computerSelect.classList.remove("btn-paper");
-computerSelect.classList.remove("btn-rock");
-computerSelect.classList.remove("btn-scissors");
-  const choices = ['paper', 'rock', 'scissors'];
-  return choices[Math.trunc(Math.random() * choices.length)];
-}*/
-
 function updateSelection() {
   userSelect.classList.remove('btn-paper');
   userSelect.classList.remove('btn-rock');
@@ -105,6 +94,9 @@ function updateSelection() {
   userSelect.classList.add(`btn-${userchoice}`);
   computerSelect.classList.add(`btn-${computerchoice}`);
 
-  userImg.src = ` image\icon-${userchoice}.svg`;
-  computerImg.src = `image\icon-${computerchoice}.svg`;
+ userImg.src =  `./image/icon-${userchoice}.svg `;
+computerImg.src =   `./image/icon-${computerchoice}.svg`;
+
+
+
 }
